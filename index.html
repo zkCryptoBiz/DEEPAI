@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <script defer src="https://cloud.umami.is/script.js" data-website-id="43c18a26-7d80-41c5-889d-c22efa0a864e"></script>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>AZUKI</title>
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="icon" href="logo2.png" type="image/png" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+         rel="stylesheet"
+      />
+   </head>
+   <body>
+      <div class="video-background">
+         <video autoplay loop muted playsinline>
+           <source src="1.mp4" type="video/mp4">
+           Your browser does not support the video tag.
+         </video>
+         <div class="content">
+            <div class="header">
+               <img src="logo2.png" alt="Ignite" class="title" />
+            </div>
+            <div class="progress-bar">
+               <div class="progress-text" id="progressText">
+                  AcGCCQN8XWnkm69HdPw7qCGw3tK3TmAu56KLduBPsup
+               </div>
+            </div>
+         </div>
+      </div>
+      <script>
+         document.addEventListener('DOMContentLoaded', () => {
+            document
+               .getElementById('progressText')
+               .addEventListener('click', function () {
+                  const textToCopy = this.textContent.trim(); // trim() для усунення зайвих пробілів
+                  navigator.clipboard
+                     .writeText(textToCopy)
+                     .then(() => {
+                        alert('Text copied to clipboard!');
+                     })
+                     .catch((err) => {
+                        console.error('Failed to copy text: ', err);
+                     });
+               });
+         });
+      </script>
+   </body>
+</html>
